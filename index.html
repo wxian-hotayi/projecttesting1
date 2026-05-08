@@ -36,7 +36,7 @@
 
         h1 {
             text-align: center;
-            background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -111,7 +111,7 @@
         .big-number {
             font-size: 5.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #818cf8 0%, #c084fc 50%, #f472b6 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -171,6 +171,414 @@
             filter: invert(1);
             cursor: pointer;
         }
+
+        .settings-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            display: inline;
+            margin-bottom: 0;
+            text-transform: none;
+            font-size: 0.95rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        .theme-selector {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .theme-option {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .theme-option:hover {
+            transform: scale(1.1);
+        }
+
+        .theme-option.active {
+            border-color: white;
+            box-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        .theme-purple { background: linear-gradient(135deg, #6366f1, #8b5cf6, #d946ef); }
+        .theme-blue { background: linear-gradient(135deg, #0ea5e9, #3b82f6, #6366f1); }
+        .theme-green { background: linear-gradient(135deg, #10b981, #14b8a6, #06b6d4); }
+        .theme-orange { background: linear-gradient(135deg, #f97316, #f59e0b, #eab308); }
+        .theme-pink { background: linear-gradient(135deg, #ec4899, #f43f5e, #e11d48); }
+
+        /* Theme-specific colors */
+        :root {
+            --primary-color: #6366f1;
+            --secondary-color: #8b5cf6;
+            --accent-color: #d946ef;
+            --tag-bg: rgba(99, 102, 241, 0.2);
+            --text-color: #94a3b8;
+        }
+
+        .theme-blue-root {
+            --primary-color: #3b82f6;
+            --secondary-color: #0ea5e9;
+            --accent-color: #06b6d4;
+            --tag-bg: rgba(59, 130, 246, 0.2);
+        }
+
+        .theme-green-root {
+            --primary-color: #10b981;
+            --secondary-color: #14b8a6;
+            --accent-color: #06b6d4;
+            --tag-bg: rgba(16, 185, 129, 0.2);
+        }
+
+        .theme-orange-root {
+            --primary-color: #f97316;
+            --secondary-color: #f59e0b;
+            --accent-color: #eab308;
+            --tag-bg: rgba(249, 115, 22, 0.2);
+        }
+
+        .theme-pink-root {
+            --primary-color: #ec4899;
+            --secondary-color: #f43f5e;
+            --accent-color: #e11d48;
+            --tag-bg: rgba(236, 72, 153, 0.2);
+        }
+
+        .holiday-table-section {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .holiday-table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .holiday-table-header label {
+            margin-bottom: 0;
+        }
+
+        .holiday-table-header .toggle-btn {
+            width: auto;
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            margin-top: 0;
+        }
+
+        .holiday-table-container {
+            max-height: 200px;
+            overflow-y: auto;
+            border-radius: 12px;
+            background: #0f172a;
+            border: 2px solid #334155;
+        }
+
+        .holiday-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .holiday-table th {
+            background: #1e293b;
+            padding: 10px 12px;
+            text-align: left;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+        }
+
+        .holiday-table td {
+            padding: 10px 12px;
+            color: #e2e8f0;
+            border-bottom: 1px solid #334155;
+        }
+
+        .holiday-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .holiday-table tr:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .holiday-type {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .holiday-type.default {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+        }
+
+        .holiday-type.custom {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+        }
+
+        .holiday-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .holiday-actions button {
+            width: auto;
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            margin: 0;
+            border-radius: 6px;
+        }
+
+        .holiday-actions .edit-btn {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+        }
+
+        .holiday-actions .delete-btn {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+
+        .holiday-actions button:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .edit-input {
+            width: 100%;
+            padding: 6px 8px;
+            font-size: 0.85rem;
+            border: 1px solid #6366f1;
+            border-radius: 6px;
+            background: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .empty-holiday-list {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        /* Modal styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: linear-gradient(145deg, #1e293b 0%, #334155 100%);
+            border-radius: 16px;
+            padding: 24px;
+            width: 100%;
+            max-width: 360px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal h2 {
+            color: #e2e8f0;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .modal-buttons button {
+            flex: 1;
+        }
+
+        .modal-buttons .cancel-btn {
+            background: #334155;
+        }
+
+        /* Mobile responsive styles */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+
+            .container {
+                padding: 24px 16px;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 1.4rem;
+                margin-bottom: 24px;
+            }
+
+            label {
+                font-size: 0.8rem;
+            }
+
+            input[type="date"] {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+
+            button {
+                padding: 14px;
+                font-size: 0.9rem;
+            }
+
+            .big-number {
+                font-size: 3.5rem;
+            }
+
+            .big-number-label {
+                font-size: 0.9rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .stat-value {
+                font-size: 1.75rem;
+            }
+
+            .theme-selector {
+                justify-content: center;
+            }
+
+            .theme-option {
+                width: 40px;
+                height: 40px;
+            }
+
+            .holiday-table-section {
+                margin-top: 20px;
+            }
+
+            .holiday-table-header {
+                flex-direction: column;
+                gap: 12px;
+                align-items: stretch;
+            }
+
+            .holiday-table-header .toggle-btn {
+                width: 100%;
+                padding: 12px;
+            }
+
+            .holiday-table-container {
+                max-height: 250px;
+            }
+
+            .holiday-table th,
+            .holiday-table td {
+                padding: 8px 6px;
+                font-size: 0.75rem;
+            }
+
+            .holiday-type {
+                font-size: 0.6rem;
+                padding: 2px 6px;
+            }
+
+            .holiday-actions {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .holiday-actions button {
+                padding: 6px 8px;
+                font-size: 0.65rem;
+            }
+        }
+
+        /* Tablet responsive */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .container {
+                padding: 32px 24px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .big-number {
+                font-size: 4.5rem;
+            }
+
+            .holiday-actions {
+                flex-direction: row;
+            }
+
+            .holiday-actions button {
+                padding: 6px 10px;
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Make table scrollable horizontally on small screens */
+        @media (max-width: 360px) {
+            .holiday-table-container {
+                overflow-x: auto;
+            }
+
+            .holiday-table {
+                min-width: 280px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -206,18 +614,79 @@
 
             <div class="holiday-note" id="holidayNote"></div>
         </div>
+
+        <div class="settings-section">
+            <label>Color Theme</label>
+            <div class="theme-selector">
+                <div class="theme-option theme-purple active" onclick="setTheme('purple')" title="Purple"></div>
+                <div class="theme-option theme-blue" onclick="setTheme('blue')" title="Blue"></div>
+                <div class="theme-option theme-green" onclick="setTheme('green')" title="Green"></div>
+                <div class="theme-option theme-orange" onclick="setTheme('orange')" title="Orange"></div>
+                <div class="theme-option theme-pink" onclick="setTheme('pink')" title="Pink"></div>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="excludeWeekend" checked>
+                <label for="excludeWeekend">Exclude weekends</label>
+            </div>
+        </div>
+
+        <div class="holiday-table-section">
+            <div class="holiday-table-header">
+                <label>Holiday List</label>
+                <button class="toggle-btn" onclick="addNewHoliday()">+ Add Holiday</button>
+            </div>
+            <div class="holiday-table-container">
+                <table class="holiday-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="holidayTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Add/Edit Holiday -->
+    <div class="modal-overlay" id="holidayModal">
+        <div class="modal">
+            <h2 id="modalTitle">Add Holiday</h2>
+            <div class="input-group">
+                <label>Date</label>
+                <input type="date" id="modalDateInput">
+            </div>
+            <div class="modal-buttons">
+                <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+                <button onclick="saveHoliday()">Save</button>
+            </div>
+        </div>
     </div>
 
     <script>
-        const holidays = [
+        const defaultHolidays = [
             '2026-01-01', '2026-02-16', '2026-02-17', '2026-02-18',
             '2026-03-23', '2026-03-24', '2026-05-01', '2026-05-27',
             '2026-06-01', '2026-07-13', '2026-08-31', '2026-09-16',
             '2026-11-09', '2026-12-25'
         ].map(d => new Date(d));
 
+        let customHolidays = [];
+        let currentTheme = 'purple';
+        let editingType = null;
+        let editingIndex = null;
+        let isEditMode = false;
+
+        function getHolidays() {
+            return [...defaultHolidays, ...customHolidays];
+        }
+
         function isHoliday(date) {
-            return holidays.some(h =>
+            return getHolidays().some(h =>
                 h.getFullYear() === date.getFullYear() &&
                 h.getMonth() === date.getMonth() &&
                 h.getDate() === date.getDate()
@@ -236,9 +705,11 @@
             const end = new Date(endDate);
             const today = new Date();
             today.setHours(0, 0, 0, 0);
+            const excludeWeekend = document.getElementById('excludeWeekend').checked;
 
             while (current <= end) {
-                if (!isWeekend(current) && !isHoliday(current)) {
+                const isWeekendDay = isWeekend(current);
+                if ((!excludeWeekend || !isWeekendDay) && !isHoliday(current)) {
                     if (current < today) {
                         passed++;
                     } else if (current <= today) {
@@ -276,12 +747,183 @@
             document.getElementById('daysPassed').textContent = passed;
             document.getElementById('totalDays').textContent = total;
 
-            const holidayCount = holidays.filter(h => h >= start && h <= end).length;
+            const excludeWeekend = document.getElementById('excludeWeekend').checked;
+            const holidayCount = getHolidays().filter(h => h >= start && h <= end).length;
+            const weekendText = excludeWeekend ? 'public holidays and weekends' : 'public holidays';
             document.getElementById('holidayNote').textContent =
-                `Excludes ${holidayCount} public holidays and weekends`;
+                `Excludes ${holidayCount} ${weekendText}`;
 
             document.getElementById('result').style.display = 'block';
         }
+
+        function setTheme(theme) {
+            currentTheme = theme;
+            document.body.className = '';
+
+            const themeClasses = {
+                'blue': 'theme-blue-root',
+                'green': 'theme-green-root',
+                'orange': 'theme-orange-root',
+                'pink': 'theme-pink-root'
+            };
+
+            if (themeClasses[theme]) {
+                document.body.classList.add(themeClasses[theme]);
+            }
+
+            document.querySelectorAll('.theme-option').forEach(el => el.classList.remove('active'));
+            document.querySelector(`.theme-${theme}`).classList.add('active');
+
+            updateButtonGradient();
+        }
+
+        function updateButtonGradient() {
+            const gradients = {
+                'purple': 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%)',
+                'blue': 'linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%)',
+                'green': 'linear-gradient(135deg, #10b981 0%, #14b8a6 50%, #06b6d4 100%)',
+                'orange': 'linear-gradient(135deg, #f97316 0%, #f59e0b 50%, #eab308 100%)',
+                'pink': 'linear-gradient(135deg, #ec4899 0%, #f43f5e 50%, #e11d48 100%)'
+            };
+
+            document.querySelector('button').style.background = gradients[currentTheme];
+        }
+
+        function addNewHoliday() {
+            isEditMode = false;
+            editingType = 'custom';
+            editingIndex = null;
+            document.getElementById('modalTitle').textContent = 'Add Holiday';
+            document.getElementById('modalDateInput').value = '';
+            document.getElementById('holidayModal').classList.add('active');
+        }
+
+        function deleteDefaultHoliday(index) {
+            if (confirm('Are you sure you want to delete this default holiday?')) {
+                defaultHolidays.splice(index, 1);
+                renderHolidayTable();
+            }
+        }
+
+        function removeHoliday(index) {
+            if (confirm('Are you sure you want to delete this holiday?')) {
+                customHolidays.splice(index, 1);
+                renderHolidayTable();
+            }
+        }
+
+        function editHoliday(type, index) {
+            isEditMode = true;
+            editingType = type;
+            const holidays = type === 'default' ? defaultHolidays : customHolidays;
+            const holiday = holidays[index];
+            const currentDate = holiday.toISOString().split('T')[0];
+            document.getElementById('modalTitle').textContent = 'Edit Holiday';
+            document.getElementById('modalDateInput').value = currentDate;
+            document.getElementById('holidayModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('holidayModal').classList.remove('active');
+        }
+
+        function saveHoliday() {
+            const dateValue = document.getElementById('modalDateInput').value;
+            if (!dateValue) {
+                alert('Please select a date');
+                return;
+            }
+
+            const newDate = new Date(dateValue);
+
+            if (isEditMode) {
+                const combinedIndex = editingType === 'default' ? editingIndex : defaultHolidays.length + editingIndex;
+
+                const exists = getHolidays().some((h, i) => {
+                    if (i === combinedIndex) return false;
+                    return h.getFullYear() === newDate.getFullYear() &&
+                           h.getMonth() === newDate.getMonth() &&
+                           h.getDate() === newDate.getDate();
+                });
+
+                if (exists) {
+                    alert('This date is already in the holiday list');
+                    return;
+                }
+
+                if (editingType === 'default') {
+                    defaultHolidays[editingIndex] = newDate;
+                } else {
+                    customHolidays[editingIndex] = newDate;
+                }
+            } else {
+                const exists = getHolidays().some(h =>
+                    h.getFullYear() === newDate.getFullYear() &&
+                    h.getMonth() === newDate.getMonth() &&
+                    h.getDate() === newDate.getDate()
+                );
+
+                if (exists) {
+                    alert('This date is already in the holiday list');
+                    return;
+                }
+
+                customHolidays.push(newDate);
+            }
+
+            closeModal();
+            renderHolidayTable();
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('holidayModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        function renderHolidayTable() {
+            const tbody = document.getElementById('holidayTableBody');
+            const allHolidays = getHolidays();
+
+            if (allHolidays.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="3" class="empty-holiday-list">No holidays configured</td></tr>';
+                return;
+            }
+
+            let html = '';
+
+            defaultHolidays.forEach((h, i) => {
+                html += `
+                    <tr>
+                        <td>${h.toISOString().split('T')[0]}</td>
+                        <td><span class="holiday-type default">Default</span></td>
+                        <td class="holiday-actions">
+                            <button class="edit-btn" onclick="editHoliday('default', ${i})">Edit</button>
+                            <button class="delete-btn" onclick="deleteDefaultHoliday(${i})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            customHolidays.forEach((h, i) => {
+                html += `
+                    <tr>
+                        <td>${h.toISOString().split('T')[0]}</td>
+                        <td><span class="holiday-type custom">Custom</span></td>
+                        <td class="holiday-actions">
+                            <button class="edit-btn" onclick="editHoliday('custom', ${i})">Edit</button>
+                            <button class="delete-btn" onclick="removeHoliday(${i})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
+        }
+
+        // Initialize holiday table on page load
+        renderHolidayTable();
     </script>
 </body>
 </html>
