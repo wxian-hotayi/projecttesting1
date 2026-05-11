@@ -17,21 +17,22 @@
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 20px;
+            align-items: flex-start;
+            padding: clamp(12px, 3vw, 40px);
         }
 
         .container {
             background: linear-gradient(145deg, #1e293b 0%, #334155 100%);
-            border-radius: 24px;
-            padding: 48px;
+            border-radius: clamp(16px, 5vw, 24px);
+            padding: clamp(16px, 5vw, 48px);
             box-shadow:
                 0 25px 50px rgba(0,0,0,0.4),
                 0 0 100px rgba(99, 102, 241, 0.1),
                 inset 0 1px 0 rgba(255,255,255,0.05);
             width: 100%;
-            max-width: 500px;
+            max-width: clamp(280px, 95vw, 500px);
             border: 1px solid rgba(255,255,255,0.05);
+            margin-top: clamp(8px, 3vw, 40px);
         }
 
         h1 {
@@ -40,14 +41,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 32px;
-            font-size: 1.75rem;
+            margin-bottom: clamp(16px, 4vw, 32px);
+            font-size: clamp(1.2rem, 5vw, 1.75rem);
             font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         .input-group {
-            margin-bottom: 20px;
+            margin-bottom: clamp(14px, 3vw, 20px);
         }
 
         label {
@@ -55,17 +56,17 @@
             margin-bottom: 8px;
             color: #94a3b8;
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: clamp(0.7rem, 2vw, 0.9rem);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
         input[type="date"] {
             width: 100%;
-            padding: 14px 16px;
+            padding: clamp(12px, 3vw, 16px);
             border: 2px solid #334155;
-            border-radius: 12px;
-            font-size: 1rem;
+            border-radius: clamp(8px, 2vw, 12px);
+            font-size: clamp(0.9rem, 3vw, 1rem);
             transition: all 0.3s ease;
             background: #0f172a;
             color: #e2e8f0;
@@ -79,12 +80,12 @@
 
         button {
             width: 100%;
-            padding: 16px;
+            padding: clamp(14px, 3vw, 16px);
             background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
             color: white;
             border: none;
-            border-radius: 12px;
-            font-size: 1rem;
+            border-radius: clamp(8px, 2vw, 12px);
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -104,12 +105,12 @@
 
         .result {
             display: none;
-            margin-top: 32px;
+            margin-top: clamp(20px, 5vw, 32px);
             text-align: center;
         }
 
         .big-number {
-            font-size: 5.5rem;
+            font-size: clamp(2.5rem, 12vw, 5.5rem);
             font-weight: 800;
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
             -webkit-background-clip: text;
@@ -119,9 +120,9 @@
         }
 
         .big-number-label {
-            font-size: 1.1rem;
+            font-size: clamp(0.85rem, 2.5vw, 1.1rem);
             color: #94a3b8;
-            margin-bottom: 28px;
+            margin-bottom: clamp(16px, 4vw, 28px);
             text-transform: uppercase;
             letter-spacing: 2px;
             font-weight: 500;
@@ -130,17 +131,19 @@
         .stats {
             display: flex;
             justify-content: space-around;
-            margin-top: 32px;
-            padding-top: 32px;
+            margin-top: clamp(20px, 5vw, 32px);
+            padding-top: clamp(20px, 5vw, 32px);
             border-top: 1px solid rgba(255,255,255,0.08);
+            gap: clamp(8px, 3vw, 20px);
         }
 
         .stat-item {
             text-align: center;
+            flex: 1;
         }
 
         .stat-value {
-            font-size: 2.25rem;
+            font-size: clamp(1.5rem, 5vw, 2.25rem);
             font-weight: 700;
             background: linear-gradient(135deg, #38bdf8 0%, #22d3ee 100%);
             -webkit-background-clip: text;
@@ -149,7 +152,7 @@
         }
 
         .stat-label {
-            font-size: 0.8rem;
+            font-size: clamp(0.65rem, 1.5vw, 0.8rem);
             color: #64748b;
             margin-top: 6px;
             text-transform: uppercase;
@@ -157,11 +160,11 @@
         }
 
         .holiday-note {
-            margin-top: 24px;
-            padding: 16px;
+            margin-top: clamp(16px, 4vw, 24px);
+            padding: clamp(12px, 3vw, 16px);
             background: rgba(99, 102, 241, 0.1);
-            border-radius: 12px;
-            font-size: 0.85rem;
+            border-radius: clamp(8px, 2vw, 12px);
+            font-size: clamp(0.75rem, 2vw, 0.85rem);
             color: #94a3b8;
             border: 1px solid rgba(99, 102, 241, 0.2);
         }
@@ -173,48 +176,52 @@
         }
 
         .settings-section {
-            margin-top: 20px;
-            padding-top: 20px;
+            margin-top: clamp(14px, 4vw, 20px);
+            padding-top: clamp(14px, 4vw, 20px);
             border-top: 1px solid rgba(255,255,255,0.08);
         }
 
         .checkbox-group {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 16px;
+            gap: clamp(8px, 2vw, 12px);
+            margin-bottom: clamp(10px, 2.5vw, 16px);
         }
 
         .checkbox-group input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
+            width: clamp(18px, 5vw, 24px);
+            height: clamp(18px, 5vw, 24px);
             accent-color: var(--primary-color);
             cursor: pointer;
+            min-width: 18px;
+            min-height: 18px;
         }
 
         .checkbox-group label {
             display: inline;
             margin-bottom: 0;
             text-transform: none;
-            font-size: 0.95rem;
+            font-size: clamp(0.8rem, 2.5vw, 0.95rem);
             color: var(--text-color);
             cursor: pointer;
         }
 
         .theme-selector {
             display: flex;
-            gap: 8px;
-            margin-bottom: 16px;
+            gap: clamp(6px, 2vw, 12px);
+            margin-bottom: clamp(10px, 2.5vw, 16px);
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .theme-option {
-            width: 36px;
-            height: 36px;
+            width: clamp(32px, 9vw, 44px);
+            height: clamp(32px, 9vw, 44px);
             border-radius: 50%;
             cursor: pointer;
             border: 3px solid transparent;
             transition: all 0.3s ease;
+            flex-shrink: 0;
         }
 
         .theme-option:hover {
@@ -270,8 +277,8 @@
         }
 
         .holiday-table-section {
-            margin-top: 24px;
-            padding-top: 20px;
+            margin-top: clamp(14px, 4vw, 24px);
+            padding-top: clamp(14px, 4vw, 20px);
             border-top: 1px solid rgba(255,255,255,0.08);
         }
 
@@ -279,7 +286,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: clamp(8px, 2vw, 12px);
+            flex-wrap: wrap;
+            gap: clamp(8px, 2vw, 12px);
         }
 
         .holiday-table-header label {
@@ -288,15 +297,15 @@
 
         .holiday-table-header .toggle-btn {
             width: auto;
-            padding: 6px 12px;
-            font-size: 0.75rem;
+            padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 16px);
+            font-size: clamp(0.7rem, 2vw, 0.85rem);
             margin-top: 0;
         }
 
         .holiday-table-container {
-            max-height: 200px;
+            max-height: clamp(120px, 30vw, 200px);
             overflow-y: auto;
-            border-radius: 12px;
+            border-radius: clamp(8px, 2vw, 12px);
             background: #0f172a;
             border: 2px solid #334155;
         }
@@ -304,24 +313,24 @@
         .holiday-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 2vw, 0.85rem);
         }
 
         .holiday-table th {
             background: #1e293b;
-            padding: 10px 12px;
+            padding: clamp(8px, 2vw, 12px);
             text-align: left;
             color: #94a3b8;
             font-weight: 600;
             text-transform: uppercase;
-            font-size: 0.75rem;
+            font-size: clamp(0.65rem, 1.5vw, 0.75rem);
             letter-spacing: 0.5px;
             position: sticky;
             top: 0;
         }
 
         .holiday-table td {
-            padding: 10px 12px;
+            padding: clamp(8px, 2vw, 12px);
             color: #e2e8f0;
             border-bottom: 1px solid #334155;
         }
@@ -336,11 +345,12 @@
 
         .holiday-type {
             display: inline-block;
-            padding: 2px 8px;
+            padding: 2px clamp(6px, 1.5vw, 10px);
             border-radius: 10px;
-            font-size: 0.7rem;
+            font-size: clamp(0.6rem, 1.5vw, 0.7rem);
             font-weight: 600;
             text-transform: uppercase;
+            white-space: nowrap;
         }
 
         .holiday-type.default {
@@ -355,15 +365,16 @@
 
         .holiday-actions {
             display: flex;
-            gap: 8px;
+            gap: clamp(4px, 1vw, 8px);
         }
 
         .holiday-actions button {
             width: auto;
-            padding: 4px 8px;
-            font-size: 0.7rem;
+            padding: clamp(4px, 1vw, 8px) clamp(6px, 1.5vw, 12px);
+            font-size: clamp(0.6rem, 1.5vw, 0.75rem);
             margin: 0;
-            border-radius: 6px;
+            border-radius: clamp(4px, 1vw, 6px);
+            white-space: nowrap;
         }
 
         .holiday-actions .edit-btn {
@@ -393,9 +404,9 @@
 
         .empty-holiday-list {
             text-align: center;
-            padding: 20px;
+            padding: clamp(12px, 3vw, 20px);
             color: #64748b;
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 2vw, 0.85rem);
         }
 
         /* Modal styles */
@@ -410,7 +421,7 @@
             z-index: 1000;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: clamp(12px, 4vw, 24px);
         }
 
         .modal-overlay.active {
@@ -419,25 +430,25 @@
 
         .modal {
             background: linear-gradient(145deg, #1e293b 0%, #334155 100%);
-            border-radius: 16px;
-            padding: 24px;
+            border-radius: clamp(12px, 4vw, 16px);
+            padding: clamp(16px, 4vw, 24px);
             width: 100%;
-            max-width: 360px;
+            max-width: clamp(280px, 90vw, 360px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .modal h2 {
             color: #e2e8f0;
-            font-size: 1.25rem;
-            margin-bottom: 20px;
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            margin-bottom: clamp(14px, 3vw, 20px);
             text-align: center;
         }
 
         .modal-buttons {
             display: flex;
-            gap: 12px;
-            margin-top: 20px;
+            gap: clamp(8px, 2vw, 12px);
+            margin-top: clamp(14px, 3vw, 20px);
         }
 
         .modal-buttons button {
@@ -448,90 +459,20 @@
             background: #334155;
         }
 
-        /* Mobile responsive styles */
-        @media (max-width: 480px) {
-            body {
-                padding: 12px;
-            }
-
-            .container {
-                padding: 24px 16px;
-                border-radius: 16px;
-            }
-
-            h1 {
-                font-size: 1.4rem;
-                margin-bottom: 24px;
-            }
-
-            label {
-                font-size: 0.8rem;
-            }
-
-            input[type="date"] {
-                padding: 12px;
-                font-size: 0.95rem;
-            }
-
-            button {
-                padding: 14px;
-                font-size: 0.9rem;
-            }
-
-            .big-number {
-                font-size: 3.5rem;
-            }
-
-            .big-number-label {
-                font-size: 0.9rem;
-            }
-
+        /* Compact styles for very small screens */
+        @media (max-width: 400px) {
             .stats {
                 flex-direction: column;
-                gap: 16px;
-            }
-
-            .stat-value {
-                font-size: 1.75rem;
-            }
-
-            .theme-selector {
-                justify-content: center;
-            }
-
-            .theme-option {
-                width: 40px;
-                height: 40px;
-            }
-
-            .holiday-table-section {
-                margin-top: 20px;
+                gap: 12px;
             }
 
             .holiday-table-header {
                 flex-direction: column;
-                gap: 12px;
                 align-items: stretch;
             }
 
             .holiday-table-header .toggle-btn {
                 width: 100%;
-                padding: 12px;
-            }
-
-            .holiday-table-container {
-                max-height: 250px;
-            }
-
-            .holiday-table th,
-            .holiday-table td {
-                padding: 8px 6px;
-                font-size: 0.75rem;
-            }
-
-            .holiday-type {
-                font-size: 0.6rem;
-                padding: 2px 6px;
             }
 
             .holiday-actions {
@@ -539,44 +480,8 @@
                 gap: 4px;
             }
 
-            .holiday-actions button {
-                padding: 6px 8px;
-                font-size: 0.65rem;
-            }
-        }
-
-        /* Tablet responsive */
-        @media (min-width: 481px) and (max-width: 768px) {
-            .container {
-                padding: 32px 24px;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .big-number {
-                font-size: 4.5rem;
-            }
-
-            .holiday-actions {
-                flex-direction: row;
-            }
-
-            .holiday-actions button {
-                padding: 6px 10px;
-                font-size: 0.7rem;
-            }
-        }
-
-        /* Make table scrollable horizontally on small screens */
-        @media (max-width: 360px) {
-            .holiday-table-container {
-                overflow-x: auto;
-            }
-
-            .holiday-table {
-                min-width: 280px;
+            .modal-buttons {
+                flex-direction: column;
             }
         }
     </style>
@@ -628,6 +533,11 @@
             <div class="checkbox-group">
                 <input type="checkbox" id="excludeWeekend" checked>
                 <label for="excludeWeekend">Exclude weekends</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="excludeHoliday" checked>
+                <label for="excludeHoliday">Exclude public holidays</label>
             </div>
         </div>
 
@@ -706,10 +616,12 @@
             const today = new Date();
             today.setHours(0, 0, 0, 0);
             const excludeWeekend = document.getElementById('excludeWeekend').checked;
+            const excludeHoliday = document.getElementById('excludeHoliday').checked;
 
             while (current <= end) {
                 const isWeekendDay = isWeekend(current);
-                if ((!excludeWeekend || !isWeekendDay) && !isHoliday(current)) {
+                const isHolidayDay = isHoliday(current);
+                if ((!excludeWeekend || !isWeekendDay) && (!excludeHoliday || !isHolidayDay)) {
                     if (current < today) {
                         passed++;
                     } else if (current <= today) {
@@ -748,10 +660,15 @@
             document.getElementById('totalDays').textContent = total;
 
             const excludeWeekend = document.getElementById('excludeWeekend').checked;
-            const holidayCount = getHolidays().filter(h => h >= start && h <= end).length;
-            const weekendText = excludeWeekend ? 'public holidays and weekends' : 'public holidays';
+            const excludeHoliday = document.getElementById('excludeHoliday').checked;
+            const holidayCount = excludeHoliday ? getHolidays().filter(h => h >= start && h <= end).length : 0;
+
+            let excludedText = [];
+            if (excludeHoliday) excludedText.push(`${holidayCount} public holidays`);
+            if (excludeWeekend) excludedText.push('weekends');
+
             document.getElementById('holidayNote').textContent =
-                `Excludes ${holidayCount} ${weekendText}`;
+                excludedText.length > 0 ? `Excludes ${excludedText.join(' and ')}` : 'No exclusions';
 
             document.getElementById('result').style.display = 'block';
         }
